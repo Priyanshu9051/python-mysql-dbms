@@ -1,6 +1,8 @@
 import mysql.connector as sql
 
-con = sql.connect(host="localhost", user="root", password="")  # Enter your password
+con = sql.connect(host="localhost", 
+                  user="root", 
+                  password="")  # Enter your password
 cursor = con.cursor()
 
 
@@ -201,3 +203,4 @@ try:
 except ValueError:
     print("Invalid input! Please enter a number only")
 con.close()
+
