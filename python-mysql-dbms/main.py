@@ -166,41 +166,43 @@ def aggregate_fun():
     except ValueError:
         print("Invalid input! Please enter a number only")
 
-
-print(
-    """1 for Create database 
-2 for Delete database
-3 for Create table
-4 for Delete table
-5 for Show tables
-6 for Show table column + values 
-7 for Update table
-8 for Update values
-9 for Use aggregate funtion"""
-)
-try:
-    n = int(input("enter the choice : "))
-    if n == 1:
-        create_database()
-    elif n == 2:
-        delete_database()
-    elif n == 3:
-        create_table()
-    elif n == 4:
-        delete_table()
-    elif n == 5:
-        show_tables()
-    elif n == 6:
-        show_tables_values()
-    elif n == 7:
-        update_table()
-    elif n == 8:
-        update_values()
-    elif n == 9:
-        aggregate_fun()
-    else:
-        print("invalid choice select again")
-except ValueError:
-    print("Invalid input! Please enter a number only")
+while True:
+    print(
+        """1 for Create database 
+    2 for Delete database
+    3 for Create table
+    4 for Delete table
+    5 for Show tables
+    6 for Show table column + values 
+    7 for Update table
+    8 for Update values
+    9 for Use aggregate funtion
+    10 for exit  """
+    )
+    try:
+        n = int(input("enter the choice : "))
+        if n == 1:
+            create_database()
+        elif n == 2:
+            delete_database()
+        elif n == 3:
+            create_table()
+        elif n == 4:
+            delete_table()
+        elif n == 5:
+            show_tables()
+        elif n == 6:
+            show_tables_values()
+        elif n == 7:
+            update_table()
+        elif n == 8:
+            update_values()
+        elif n == 9:
+            aggregate_fun()
+        elif n==10:
+            break
+        else:
+            print("invalid choice select again")
+    except ValueError:
+        print("Invalid input! Please enter a number only")
 con.close()
-
